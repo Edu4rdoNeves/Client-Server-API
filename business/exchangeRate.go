@@ -22,7 +22,6 @@ func GetLastExchangeRate(ctx *gin.Context) (*model.ExchangeRate, error) {
 		return nil, err
 	}
 
-	//salvar em um arquivo txt
 	err = SaveAtTxtFile(exchangeRate)
 	if err != nil {
 		return nil, err
